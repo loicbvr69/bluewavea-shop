@@ -181,6 +181,28 @@ nav a.on{color:#fff;background:linear-gradient(120deg,#0B2E33,#0F4C4F 55%,#0E7C7
 @media (max-width:600px){.cx{padding:28px 22px;border-radius:20px}.compte-btn .lib{display:none}}
 .toast{pointer-events:none;width:max-content;max-width:calc(100vw - 32px);position:fixed;left:50%;bottom:24px;transform:translate(-50%,30px);opacity:0;z-index:100;background:#0B2E33;color:#fff;font-weight:700;font-size:14px;padding:12px 18px;border-radius:12px;box-shadow:0 16px 30px -12px rgba(6,26,29,.6);transition:all .25s;display:flex;align-items:center;gap:9px}
 .toast.on{opacity:1;transform:translate(-50%,0)}
+.nav-mob{display:none}
+.ct{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:40px;align-items:start}
+.ct-g h2{font-family:'Playfair Display',serif;font-size:36px;line-height:1.12;margin:0;color:#0B2E33}
+.ct-g>p{font-size:16px;line-height:1.65;color:#4E6B6E;margin:14px 0 22px}
+.ct-l{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid #E1ECE9;border-radius:16px;padding:15px 18px;margin-top:12px;color:#0B2E33;box-shadow:0 10px 24px -20px rgba(11,46,51,.4)}
+a.ct-l:hover{background:#EDF6F4}
+.ct-l .ic{width:44px;height:44px;border-radius:12px;background:#E6F4F1;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ct-l small{display:block;font-size:12.5px;font-weight:700;color:#4E6B6E}.ct-l b{display:block;font-size:16px;word-break:break-word}
+.ct-f{background:#fff;border:1px solid #D6E5E1;border-radius:24px;padding:32px;box-shadow:0 22px 50px rgba(0,19,49,.10)}
+.ct-f h3{font-family:'Playfair Display',serif;font-size:25px;margin:0;color:#0B2E33}
+.ct-f>p{font-size:14.5px;line-height:1.55;color:#4E6B6E;margin:6px 0 0}
+.ct-f .g{display:grid;gap:12px;margin-top:20px}.ct-f .d{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
+.ct-f .cv{display:grid;grid-template-columns:130px minmax(0,1fr);gap:12px}.ct-f .cp{display:grid;grid-template-columns:120px minmax(0,1fr);gap:12px}
+.ct-f label{display:block;font-size:12px;font-weight:800;color:#4E6B6E;margin:0 0 5px}
+.ct-f input,.ct-f select,.ct-f textarea{width:100%;min-width:0;background:#fff;border:1px solid #D6E5E1;border-radius:12px;padding:13px 14px;font-size:15px;font-family:inherit;color:#0B2E33;outline:0}
+.ct-f textarea{min-height:120px;resize:vertical}
+.ct-f input:focus,.ct-f select:focus,.ct-f textarea:focus{border-color:#14998F;box-shadow:0 0 0 3px rgba(20,153,143,.15)}
+.ct-f .bp{width:100%;justify-content:center;background:linear-gradient(120deg,#0B2E33,#0F4C4F 55%,#0E7C7B);color:#fff;padding:16px;border-radius:13px;font-weight:800;font-size:16px;border:0;cursor:pointer;font-family:inherit;display:flex;align-items:center;gap:9px}
+.ct-f .fin{text-align:center;padding:18px 6px}.ct-f .fin .rond{width:64px;height:64px;border-radius:50%;margin:0 auto 14px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#D98A4A,#B8612A);box-shadow:0 0 0 8px rgba(184,97,42,.14)}
+.ct-f .fin a{display:inline-block;margin-top:14px;font-weight:800;color:#0E7C7B;cursor:pointer}
+@media (max-width:900px){.ct{grid-template-columns:1fr;gap:28px}header nav.nav-mob{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:0;padding:0 18px 10px}header nav.nav-mob a{text-align:center;padding:9px 6px;font-size:13.5px}}
+@media (max-width:600px){.ct-g h2{font-size:28px}.ct-f{padding:24px 18px;border-radius:20px}.ct-f .d,.ct-f .cp{grid-template-columns:1fr}.ct-f .cv{grid-template-columns:132px minmax(0,1fr)}}
 /* téléphone */
 @media (max-width:900px){
  .cats{grid-template-columns:1fr 1fr}.ph h1{font-size:34px}
@@ -201,10 +223,11 @@ nav a.on{color:#fff;background:linear-gradient(120deg,#0B2E33,#0F4C4F 55%,#0E7C7
 <body>
 <header><div class="wrap hd">
   <a class="marque" href="#accueil"><img src="bw-logo-site.png" alt="BlueWavea"><b>BlueWavea</b><span class="pill">SHOP</span></a>
-  <nav><a href="#accueil" data-nav="accueil">Accueil</a><a href="#catalogue" data-nav="catalogue">Catalogue</a><a href="https://bluewavea.fr/">bluewavea.fr</a></nav>
+  <nav><a href="#accueil" data-nav="accueil">Accueil</a><a href="#catalogue" data-nav="catalogue">Catalogue</a><a href="#contact" data-nav="contact">Contact</a><a href="https://bluewavea.fr/">bluewavea.fr</a></nav>
   <a class="compte-btn" id="compteBtn" href="#compte" aria-label="Mon compte"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#0B2E33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span class="lib" id="compteLib">Se connecter</span></a>
   <button class="panier-btn" id="ouvrirPanier" aria-label="Ouvrir le panier"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg><span class="lib">Panier</span><span class="n" id="nb">0</span></button>
-</div></header>
+</div>
+<nav class="nav-mob"><a href="#accueil" data-nav="accueil">Accueil</a><a href="#catalogue" data-nav="catalogue">Catalogue</a><a href="#contact" data-nav="contact">Contact</a></nav></header>
 
 <main>
 <!-- ═════ PAGE D'ACCUEIL ═════ -->
@@ -262,12 +285,27 @@ nav a.on{color:#fff;background:linear-gradient(120deg,#0B2E33,#0F4C4F 55%,#0E7C7
 <div class="ph"><div class="med"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></div><span class="eti">Votre compte, le même que sur bluewavea.fr</span><h1 id="phCompte">Espace client</h1><div class="trait"></div><p id="phTexte">Connectez-vous avec l'adresse e-mail de votre fiche client pour commander vos consommables.</p></div>
 <section class="s"><div class="wrap"><div class="cx" id="cx"></div></div></section>
 </div>
+<!-- ═════ PAGE CONTACT ═════ -->
+<div data-page="contact" hidden>
+<div class="ph"><div class="med"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2.5"/><path d="m22 7-10 6L2 7"/></svg></div><span class="eti">Une question, une commande</span><h1>Contact</h1><div class="trait"></div><p>Par téléphone, par e-mail ou avec le formulaire : réponse sous 24 heures ouvrées.</p></div>
+<section class="s"><div class="wrap"><div class="ct">
+ <div class="ct-g">
+  <h2>Une question ? Écrivez-moi</h2>
+  <p>Je réponds moi-même, généralement dans la journée. Pour une urgence, le téléphone reste le plus rapide.</p>
+  <a class="ct-l" href="tel:+33650378930"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0E7C7B" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span><span><small>Téléphone</small><b>06 50 37 89 30</b></span></a>
+  <a class="ct-l" href="mailto:contact@bluewavea.fr"><span class="ic"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#0E7C7B" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2.5"/><path d="m22 7-10 6L2 7"/></svg></span><span><small>E-mail</small><b>contact@bluewavea.fr</b></span></a>
+  <div class="ct-l"><span class="ic"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#0E7C7B" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span><span><small>Adresse</small><b>4 place des Condamines, 69480 Anse</b></span></div>
+  <div class="ct-l"><span class="ic"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#0E7C7B" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span><span><small>Horaires</small><b>Lundi au samedi · 8 h – 12 h et 14 h – 18 h</b></span></div>
+ </div>
+ <div class="ct-f" id="ctF"></div>
+</div></div></section>
+</div>
 </main>
 
 <footer><div class="wrap">
  <div class="fcols">
   <div><img src="logo-blanc.png" alt="BlueWavea" style="height:40px;margin-bottom:10px"><p>Eau Pure Maîtrisée — Confiance Assurée.<br>Entretien, dépannage et mise en service d'adoucisseurs d'eau.</p></div>
-  <div><h5>SHOP</h5><a href="#accueil">Accueil</a><a href="#catalogue">Catalogue</a><a href="#compte">Mon compte</a><a href="#" id="lienPanier">Mon panier</a></div>
+  <div><h5>SHOP</h5><a href="#accueil">Accueil</a><a href="#catalogue">Catalogue</a><a href="#compte">Mon compte</a><a href="#contact">Contact</a><a href="#" id="lienPanier">Mon panier</a></div>
   <div><h5>CONTACT</h5><a href="tel:+33650378930">06 50 37 89 30</a><a href="mailto:contact@bluewavea.fr">contact@bluewavea.fr</a><a href="https://bluewavea.fr/">bluewavea.fr</a></div>
  </div>
  <div class="flegal"><span>© <span id="an"></span> BlueWavea · 4 place des Condamines, 69480 Anse · SIREN 892 317 496</span><span>TVA non applicable, article 293 B du CGI</span></div>
@@ -410,10 +448,11 @@ document.getElementById('cx').addEventListener('keydown',function(e){ if(e.key!=
 document.addEventListener('keydown',function(e){ if(e.key==='Escape'){ tiroir(false); } });
 document.getElementById('q').addEventListener('input',function(e){ q=e.target.value.trim().toLowerCase(); grille(); });
 document.getElementById('an').textContent=new Date().getFullYear();
-function aller(){ var h=(location.hash||'#accueil').slice(1), pg=(h==='catalogue'||h==='compte')?h:'accueil';
+function aller(){ var h=(location.hash||'#accueil').slice(1), pg=(h==='catalogue'||h==='compte'||h==='contact')?h:'accueil';
  [].forEach.call(document.querySelectorAll('[data-page]'),function(d){ d.hidden=d.getAttribute('data-page')!==pg; });
  [].forEach.call(document.querySelectorAll('[data-nav]'),function(a){ a.classList.toggle('on',a.getAttribute('data-nav')===pg); });
  if(pg==='compte') rendreCx();
+ if(pg==='contact') rendreCt();
  if(h==='comment'){ var c=document.getElementById('comment'); if(c) setTimeout(function(){ c.scrollIntoView(); },0); } else window.scrollTo(0,0); }
 window.addEventListener('hashchange',aller);
 function accueil(){ document.getElementById('cats').innerHTML=CATS.filter(function(c){return c[0]!=='tout'&&produits.some(function(p){return cat(p)===c[0];});}).map(function(c){ var n=produits.filter(function(p){return cat(p)===c[0];}).length, s=STYLE[c[0]];
@@ -421,6 +460,33 @@ function accueil(){ document.getElementById('cats').innerHTML=CATS.filter(functi
  var sel=produits.slice().sort(function(a,b){ return (b.dispo>0)-(a.dispo>0); }).filter(function(p,i,L){ return L.findIndex(function(q){return cat(q)===cat(p);})===i; }).slice(0,3);
  var g=document.getElementById('grille'); var keep=g.innerHTML; var L0=produits; produits=sel; var f0=filtre, q0=q; filtre='tout'; q=''; grille(); document.getElementById('selection').innerHTML=g.innerHTML; produits=L0; filtre=f0; q=q0; g.innerHTML=keep; }
 var grille0=grille; grille=function(){ grille0(); };
+var CT={envoye:false,ko:false,err:'',envoi:false,v:{civ:'Monsieur',nom:'',prenom:'',tel:'',email:'',adresse:'',cp:'',ville:'',sujet:'Question sur une commande',msg:''}};
+function ctLire(){ var f=document.getElementById('ctF'); [].forEach.call(f.querySelectorAll('[data-c]'),function(x){ CT.v[x.getAttribute('data-c')]=x.value; }); }
+function rendreCt(){ var f=document.getElementById('ctF'), v=CT.v;
+ if(COMPTE&&!v.email) v.email=COMPTE.email||'';
+ if(CT.envoye){ f.innerHTML='<div class="fin"><div class="rond">'+I.okg+'</div><h3>Message envoyé</h3><p style="font-size:15px;line-height:1.6;color:#4E6B6E;margin:10px 0 0">'+(CT.ko?'L\'envoi n\'a pas abouti. Appelez-moi au 06 50 37 89 30 ou écrivez directement à contact@bluewavea.fr.':'Votre message m\'est parvenu. Je vous réponds au plus vite.')+'</p><a id="ctAutre">↺ Écrire un autre message</a></div>'; return; }
+ function ch(k,lib,type){ return '<div><label for="ct_'+k+'">'+lib+'</label><input id="ct_'+k+'" data-c="'+k+'" type="'+(type||'text')+'" value="'+esc(v[k])+'"></div>'; }
+ var sujets=['Autre demande','Question sur un article','Question sur une commande','Rendez-vous de remise'];
+ f.innerHTML='<h3>Envoyez-moi votre message</h3><p>Tous les champs sont obligatoires, pour que je puisse vous répondre précisément.</p><div class="g">'
+ +'<div class="cv"><div><label for="ct_civ">Civilité</label><select id="ct_civ" data-c="civ"><option'+(v.civ==='Madame'?' selected':'')+'>Madame</option><option'+(v.civ!=='Madame'?' selected':'')+'>Monsieur</option></select></div>'+ch('nom','Nom')+'</div>'
+ +ch('prenom','Prénom')
+ +'<div class="d">'+ch('tel','Téléphone','tel')+ch('email','E-mail','email')+'</div>'
+ +ch('adresse','Adresse')
+ +'<div class="cp">'+ch('cp','Code postal')+ch('ville','Ville')+'</div>'
+ +'<div><label for="ct_sujet">Sujet</label><select id="ct_sujet" data-c="sujet">'+sujets.map(function(x){return '<option'+(x===v.sujet?' selected':'')+'>'+x+'</option>';}).join('')+'</select></div>'
+ +'<div><label for="ct_msg">Message</label><textarea id="ct_msg" data-c="msg">'+esc(v.msg)+'</textarea></div>'
+ +(CT.err?'<div class="msg err">'+esc(CT.err)+'</div>':'')
+ +'<button class="bp" id="ctEnvoyer"'+(CT.envoi?' disabled':'')+'>'+(CT.envoi?'Envoi en cours…':'Envoyer mon message')+'</button></div>'; }
+function ctEnvoyer(){ ctLire(); var v=CT.v;
+ for(var k in v) if(!String(v[k]).trim()){ CT.err='Tous les champs sont obligatoires.'; rendreCt(); return; }
+ if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v.email.trim())){ CT.err='L\'adresse e-mail n\'est pas valide.'; rendreCt(); return; }
+ if(APERCU){ CT.err='Aperçu : rien n\'est envoyé ici. Sur shop.bluewavea.fr, le message vous arrive par e-mail.'; rendreCt(); return; }
+ CT.err=''; CT.envoi=true; rendreCt();
+ svc('site-contact',{civilite:v.civ,nom:v.nom.trim(),prenom:v.prenom.trim(),tel:v.tel.trim(),email:v.email.trim(),adresse:v.adresse.trim(),cp:v.cp.trim(),ville:v.ville.trim(),sujet:'BlueWavea Shop — '+v.sujet,message:v.msg.trim()})
+  .then(function(){ CT.envoi=false; CT.envoye=true; CT.ko=false; rendreCt(); },function(){ CT.envoi=false; CT.envoye=true; CT.ko=true; rendreCt(); }); }
+document.getElementById('ctF').addEventListener('click',function(e){ var t=e.target.closest('#ctEnvoyer,#ctAutre'); if(!t) return; e.preventDefault();
+ if(t.id==='ctEnvoyer') ctEnvoyer(); else { CT.envoye=false; CT.ko=false; CT.v.msg=''; rendreCt(); } });
+document.getElementById('ctF').addEventListener('input',function(e){ if(e.target.getAttribute('data-c')){ CT.v[e.target.getAttribute('data-c')]=e.target.value; if(CT.err){ CT.err=''; } } });
 bande(); filtres(); grille(); accueil(); majNb(); aller(); chargerCompte();
 /* stock réel de l'application (remplace la liste enregistrée dès qu'il répond) */
 fetch(URL_F,{method:'POST',headers:{apikey:CLE,authorization:'Bearer '+CLE,'content-type':'application/json'},body:JSON.stringify({action:'shop-catalogue'})}).then(function(r){return r.json();}).then(function(j){ if(j&&j.ok&&j.produits&&j.produits.length){ produits=j.produits; filtres(); grille(); accueil(); majNb(); } }).catch(function(){});
